@@ -3,5 +3,18 @@
   "item.pruebamod.chipgrande": "Chip Grande",
 
 
+
+  "item.pruebamod.ruby": "Ruby",
+  "item.pruebamod.zircon": "Zircon",
+  "item.pruebamod.garnet": "Garnet",
+  "item.pruebamod.sapphire": "Sapphire",
+  "item.pruebamod.smokestone": "Smoke Stone",
+  "item.pruebamod.topaz": "Topaz",
+  "item.pruebamod.heliodor": "Heliodor",
+
+
+
+
+
   "itemGroup.tabprueba": "Currency"
 }
