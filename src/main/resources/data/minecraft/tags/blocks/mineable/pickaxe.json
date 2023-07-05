@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "pruebamod:zircon_ore",
+    "pruebamod:topaz_ore",
+    "pruebamod:sapphire_ore",
+    "pruebamod:garnet_ore",
+    "pruebamod:ruby_ore",
+    "pruebamod:heliodor_ore",
+    "pruebamod:smokestone_ore"
+  ]
+}
