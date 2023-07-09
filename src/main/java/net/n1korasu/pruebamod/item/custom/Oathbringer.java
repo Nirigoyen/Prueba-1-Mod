@@ -13,7 +13,6 @@ public class Oathbringer extends SwordItem {
         super(tier, dmg, spd, prop);
     }
 
-
     @Override
     public boolean hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
 

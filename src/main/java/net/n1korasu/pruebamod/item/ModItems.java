@@ -32,8 +32,6 @@ public class ModItems {
     public static final RegistryObject<Item> TOPAZ = ITEMS.register("topaz", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.PRUEBA_TAB)));
     public static final RegistryObject<Item> HELIODOR = ITEMS.register("heliodor", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.PRUEBA_TAB)));
 
-
-
     //ESPADAS
     public static final RegistryObject<SwordItem> SWORD2 = ITEMS.register("sword", () -> new Oathbringer(net.n1korasu.pruebamod.item.custom.Tiers.Esquirlada,0,-3.8f, new Item.Properties().tab(ModCreativeModeTab.PRUEBA_TAB)));
 
