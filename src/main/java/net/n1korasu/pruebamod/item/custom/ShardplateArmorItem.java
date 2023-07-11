@@ -26,7 +26,7 @@ public class ShardplateArmorItem extends GeoArmorItem implements IAnimatable {
 
     private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>())
-                    .put(ModArmorMaterials.SHARDPLATE, new MobEffectInstance(MobEffects.ABSORPTION., 200, 4)).build();
+                    .put(ModArmorMaterials.SHARDPLATE, new MobEffectInstance(MobEffects.ABSORPTION, 200, 4)).build();
 
     public ShardplateArmorItem(ArmorMaterial material, EquipmentSlot slot, Properties settings) {
         super(material, slot, settings);
