@@ -1,8 +1,11 @@
 package net.n1korasu.pruebamod.item;
 
 
+import net.n1korasu.pruebamod.item.custom.ModArmorItem;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tier;
@@ -14,6 +17,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.n1korasu.pruebamod.PruebaMod;
 import net.n1korasu.pruebamod.item.custom.Oathbringer;
+import net.n1korasu.pruebamod.item.custom.ShardplateArmorItem;
 import net.n1korasu.pruebamod.item.custom.Tiers;
 
 public class ModItems {
@@ -34,6 +38,14 @@ public class ModItems {
 
     //ESPADAS
     public static final RegistryObject<SwordItem> SWORD2 = ITEMS.register("sword", () -> new Oathbringer(net.n1korasu.pruebamod.item.custom.Tiers.Esquirlada,0,-3.8f, new Item.Properties().tab(ModCreativeModeTab.PRUEBA_TAB)));
+
+
+    //ARMADURA
+    public static final RegistryObject<Item> SHARDPLATE_HELMET = ITEMS.register("shardplate_helmet", () -> new ShardplateArmorItem(ModArmorMaterials.SHARDPLATE, EquipmentSlot.HEAD, new Item.Properties().tab(ModCreativeModeTab.PRUEBA_TAB)));
+    public static final RegistryObject<Item> SHARDPLATE_CHEST = ITEMS.register("shardplate_chest", () -> new ShardplateArmorItem(ModArmorMaterials.SHARDPLATE, EquipmentSlot.CHEST, new Item.Properties().tab(ModCreativeModeTab.PRUEBA_TAB)));
+    public static final RegistryObject<Item> SHARDPLATE_LEGS = ITEMS.register("shardplate_legs", () -> new ShardplateArmorItem(ModArmorMaterials.SHARDPLATE, EquipmentSlot.LEGS, new Item.Properties().tab(ModCreativeModeTab.PRUEBA_TAB)));
+    public static final RegistryObject<Item> SHARDPLATE_BOOTS = ITEMS.register("shardplate_boots", () -> new ShardplateArmorItem(ModArmorMaterials.SHARDPLATE, EquipmentSlot.FEET, new Item.Properties().tab(ModCreativeModeTab.PRUEBA_TAB)));
+
 
 
     public static void register (IEventBus eventBus){

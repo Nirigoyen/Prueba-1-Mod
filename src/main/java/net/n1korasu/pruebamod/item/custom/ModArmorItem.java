@@ -10,42 +10,17 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import software.bernie.geckolib3.core.IAnimatable;
-import software.bernie.geckolib3.core.PlayState;
-import software.bernie.geckolib3.core.builder.AnimationBuilder;
-import software.bernie.geckolib3.core.controller.AnimationController;
-import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
-import software.bernie.geckolib3.core.manager.AnimationData;
-import software.bernie.geckolib3.core.manager.AnimationFactory;
-import software.bernie.geckolib3.item.GeoArmorItem;
 
 import java.util.Map;
 
-public class ShardplateArmorItem extends GeoArmorItem implements IAnimatable {
-    private AnimationFactory factory = new AnimationFactory(this);
-
+public class ModArmorItem extends ArmorItem {
     private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>())
-                    .put(ModArmorMaterials.SHARDPLATE, new MobEffectInstance(MobEffects.ABSORPTION., 200, 4)).build();
+                    .put(ModArmorMaterials.SHARDPLATE,
+                            new MobEffectInstance(MobEffects.ABSORPTION, 500, 4)).build();
 
-    public ShardplateArmorItem(ArmorMaterial material, EquipmentSlot slot, Properties settings) {
+    public ModArmorItem(ArmorMaterial material, EquipmentSlot slot, Properties settings) {
         super(material, slot, settings);
-    }
-
-    @Override
-    public void registerControllers(AnimationData data) {
-        data.addAnimationController(new AnimationController<ShardplateArmorItem>(this, "controller",
-                20, this::predicate));
-    }
-
-    @Override
-    public AnimationFactory getFactory() {
-        return this.factory;
-    }
-
-    private <P extends IAnimatable> PlayState predicate(AnimationEvent<P> event) {
-        event.getController().setAnimation(new AnimationBuilder().addAnimation("idle", true));
-        return PlayState.CONTINUE;
     }
 
     @Override
