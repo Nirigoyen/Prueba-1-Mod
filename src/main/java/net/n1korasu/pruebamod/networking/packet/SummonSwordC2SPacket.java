@@ -45,7 +45,7 @@ public class SummonSwordC2SPacket {
             if (player.getMainHandItem().isEmpty()){
                 Minecraft.getInstance().player.sendSystemMessage(Component.literal("10 heartbeats..."));
                 summon();
-                Minecraft.getInstance().player.addItem(new ItemStack(ModItems.OATHBRINGER.get()));
+                Minecraft.getInstance().player.addItem(new ItemStack(ModItems.OATHBRINGER.get())); //ME DA EL ITEM PERO NO EN FORMATO DE ESPADA, SOLAMENTE COMO UN ITEM CUALQUIERA
 
 
 
