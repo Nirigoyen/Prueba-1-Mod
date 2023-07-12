@@ -21,4 +21,9 @@ public class Oathbringer extends SwordItem {
 
         return super.hurtEnemy(stack, target, attacker);
     }
+
+//    @Override
+//    public boolean isEnchantable (){
+//        return false;
+//    }  ESTO ES PARA HACER QUE NO SE PUEDA ENCANTAR LA ESPADA
 }

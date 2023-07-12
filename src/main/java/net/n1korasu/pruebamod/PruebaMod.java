@@ -13,6 +13,7 @@ import net.minecraftforge.network.NetworkEvent;
 import net.n1korasu.pruebamod.block.ModBlocks;
 import net.n1korasu.pruebamod.item.ModItems;
 import net.n1korasu.pruebamod.item.custom.Oathbringer;
+import net.n1korasu.pruebamod.networking.ModMessages;
 import org.slf4j.Logger;
 
 import java.util.function.Supplier;
@@ -37,6 +38,7 @@ public class PruebaMod {
 
     private void commonSetup(final FMLCommonSetupEvent event) {
 
+        ModMessages.register();
     }
 
 

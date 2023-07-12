@@ -9,6 +9,8 @@ import net.minecraftforge.client.event.RegisterKeyMappingsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.n1korasu.pruebamod.PruebaMod;
+import net.n1korasu.pruebamod.networking.ModMessages;
+import net.n1korasu.pruebamod.networking.packet.SummonSwordC2SPacket;
 import net.n1korasu.pruebamod.util.Keybinding;
 
 public class ClientEvents {
@@ -18,7 +20,7 @@ public class ClientEvents {
         @SubscribeEvent
         public static void onKeyInput(InputEvent.Key event){
             if (Keybinding.SUMMON_SHARDBLADE.consumeClick()){
-                Minecraft.getInstance().player.sendSystemMessage(Component.literal("10 heartbeats..."));
+                ModMessages.sendToServer(new SummonSwordC2SPacket());
             }
         }
     }
