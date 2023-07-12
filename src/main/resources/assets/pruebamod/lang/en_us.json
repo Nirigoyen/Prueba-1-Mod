@@ -12,6 +12,9 @@
   "item.pruebamod.topaz": "Topaz",
   "item.pruebamod.heliodor": "Heliodor",
 
+  "item.pruebamod.ruby_broam": "Ruby Broam",
+  "item.pruebamod.ruby_mark": "Ruby Mark",
+  "item.pruebamod.ruby_chip": "Ruby Chip",
 
   "block.pruebamod.zircon_ore": "Zircon Ore",
   "block.pruebamod.topaz_ore": "Topaz Ore",
@@ -21,7 +24,7 @@
   "block.pruebamod.ruby_ore": "Ruby Ore",
   "block.pruebamod.heliodor_ore": "Heliodor Ore",
 
-  "item.pruebamod.sword" : "Oathbringer",
+  "item.pruebamod.oathbringer" : "Oathbringer",
 
 
   "item.pruebamod.shardplate_helmet" : "Shardplate Helmet",
@@ -29,6 +32,8 @@
   "item.pruebamod.shardplate_legs" : "Shardplate Leggings",
   "item.pruebamod.shardplate_boots" : "Shardplate Boots",
 
+  "key.category.pruebamod.prueba": "Categoria de Prueba",
+  "key.pruebamod.summon_shardblade" : "Summon Shardblade",
 
 
   "itemGroup.tabprueba": "Currency"
