@@ -5,11 +5,10 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.SpawnEggItem;
-import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.*;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.event.RegisterColorHandlersEvent;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.network.NetworkEvent;
 import net.n1korasu.pruebamod.event.ModEvents;
 import net.n1korasu.pruebamod.item.ModCreativeModeTab;
@@ -43,11 +42,13 @@ public class SummonSwordC2SPacket {
 
 
             if (player.getMainHandItem().isEmpty()){
-                Minecraft.getInstance().player.sendSystemMessage(Component.literal("10 heartbeats..."));
-                summon();
-                Minecraft.getInstance().player.addItem(new ItemStack(ModItems.OATHBRINGER.get())); //ME DA EL ITEM PERO NO EN FORMATO DE ESPADA, SOLAMENTE COMO UN ITEM CUALQUIERA
+                summon(player);
 
+                //player.getInventory().add(new ItemStack(Items.STICK));
 
+                player.getInventory().add(new ItemStack(ModItems.OATHBRINGER.get()));
+
+//                player.addItem(new ItemStack(Items.STICK)); //ME DA EL ITEM PERO NO EN FORMATO DE ESPADA, SOLAMENTE COMO UN ITEM CUALQUIERA
 
 
 
@@ -59,7 +60,8 @@ public class SummonSwordC2SPacket {
         return true;
     }
 
-    public void summon(){
+    public void summon(ServerPlayer player){
+        player.sendSystemMessage(Component.literal("10 heartbeats..."));
         for (int i = 9; i > 0; i-- ){
             Minecraft.getInstance().player.sendSystemMessage(Component.literal(i + "..."));
         }
